@@ -1,9 +1,9 @@
 name: CI-CD-Pipeline-to-AWS-EB
 env:
   EB_PACKAGE_S3_BUCKET_NAME : "elasticbeanstalk-eu-central-1-094558097015"
-  EB_APPLICATION_NAME       : "Myflask"
-  EB_ENVIRONMENT_NAME       : "Myflask-env"
-  DEPLOY_PACKAGE_NAME       : "flask_app_${{ github.sha }}.zip"
+  EB_APPLICATION_NAME       : "ArtApp"
+  EB_ENVIRONMENT_NAME       : "ArtApp-env"
+  DEPLOY_PACKAGE_NAME       : "ArtApp_${{ github.sha }}.zip"
   AWS_REGION_NAME           : "eu-central-1"
   
   
