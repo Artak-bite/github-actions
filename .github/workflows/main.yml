@@ -2,7 +2,7 @@ name: CI-CD-Pipeline-to-AWS-EB
 env:
   EB_PACKAGE_S3_BUCKET_NAME : "elasticbeanstalk-eu-central-1-094558097015"
   EB_APPLICATION_NAME       : "Myflask"
-  EB_ENVIROMENT_NAME        : "Myflask-env"
+  EB_ENVIRONMENT_NAME       : "Myflask-env"
   DEPLOY_PACKAGE_NAME       : "flask_app_${{ github.sha }}.zip"
   AWS_REGION_NAME           : "eu-central-1"
   
@@ -60,7 +60,7 @@ jobs:
         --description "CommitSHA-${{ github.sha }}"
         
     - name: Deploy new EB App Version
-      run : aws elasticbeanstalk update-enviroment --enviroment-name ${{ env.EB_ENVIROMENT_NAME }} --version-label "Ver-${{ github.sha }}"
+      run : aws elasticbeanstalk update-environment --environment-name ${{ env.EB_ENVIRONMENT_NAME }} --version-label "Ver-${{ github.sha }}"
     
     - name: Print done message for CD finish
       run : echo "CD Pipline part finished successfully!" 
