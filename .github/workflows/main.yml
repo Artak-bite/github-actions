@@ -10,7 +10,7 @@ env:
 on:
   push:
     branches:
-      - main
+      - m
       
 jobs:
   my_ci_part:
